@@ -60,6 +60,7 @@ def split_data(
             "seed :",
             seed,
         )
+        print("dataset type:", type(dataset), dataset.shape)
         return train_dataset, val_dataset, test_dataset
     else:
         print("invalid ratios")
