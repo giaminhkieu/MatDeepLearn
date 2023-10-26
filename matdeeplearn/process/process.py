@@ -67,6 +67,7 @@ def split_data(
 
 ##Basic CV split
 def split_data_CV(dataset, num_folds=5, seed=np.random.randint(1, 1e6), save=False):
+    print("dataset type:", type(dataset), dataset.shape)
     dataset_size = len(dataset)
     fold_length = int(dataset_size / num_folds)
     unused_length = dataset_size - fold_length * num_folds
