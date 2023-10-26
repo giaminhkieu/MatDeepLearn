@@ -112,8 +112,8 @@ Training:
     loss: "l1_loss"       
     #Ratios for train/val/test split out of a total of 1  
     train_ratio: 0.8
-    val_ratio: 0.05
-    test_ratio: 0.15
+    val_ratio: 0.19
+    test_ratio: 0.01
     #Training print out frequency (print per n number of epochs)
     verbosity: 5
     
@@ -176,7 +176,7 @@ Models:
         dropout_rate: 0.0
         epochs: 150
         lr: 0.0005
-        batch_size: 100
+        batch_size: 300
         optimizer: "AdamW"
         optimizer_args: {}
         scheduler: "ReduceLROnPlateau"
@@ -198,7 +198,7 @@ Models:
         dropout_rate: 0.0
         epochs: 150
         lr: 0.0005
-        batch_size: 100
+        batch_size: 300
         optimizer: "AdamW"
         optimizer_args: {}
         scheduler: "ReduceLROnPlateau"
@@ -218,7 +218,7 @@ Models:
         dropout_rate: 0.0
         epochs: 150
         lr: 0.002
-        batch_size: 100
+        batch_size: 300
         optimizer: "AdamW"
         optimizer_args: {}
         scheduler: "ReduceLROnPlateau"
