@@ -990,8 +990,8 @@ def tune_setup(
     import ray
     from ray import tune
     from ray.tune.schedulers import ASHAScheduler
-    from ray.tune.suggest.hyperopt import HyperOptSearch
-    from ray.tune.suggest import ConcurrencyLimiter
+    from ray.tune.search.hyperopt import HyperOptSearch
+    from ray.tune.search import ConcurrencyLimiter
     from ray.tune import CLIReporter
 
     ray.init()
