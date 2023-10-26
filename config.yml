@@ -99,7 +99,7 @@ Processing:
     #SM specific settings
     SM_descriptor: "False"
     #SOAP specific settings
-    SOAP_descriptor: "True"
+    SOAP_descriptor: "False"
     SOAP_rcut : 8.0
     SOAP_nmax : 6
     SOAP_lmax : 4
