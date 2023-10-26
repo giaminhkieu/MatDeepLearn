@@ -60,7 +60,6 @@ def split_data(
             "seed :",
             seed,
         )
-        print("dataset type:", type(dataset), dataset.shape)
         return train_dataset, val_dataset, test_dataset
     else:
         print("invalid ratios")
@@ -68,7 +67,6 @@ def split_data(
 
 ##Basic CV split
 def split_data_CV(dataset, num_folds=5, seed=np.random.randint(1, 1e6), save=False):
-    print("dataset type:", type(dataset), dataset.shape)
     dataset_size = len(dataset)
     fold_length = int(dataset_size / num_folds)
     unused_length = dataset_size - fold_length * num_folds
