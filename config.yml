@@ -174,7 +174,7 @@ Models:
         batch_track_stats: "True"
         act: "relu"
         dropout_rate: 0.0
-        epochs: 150
+        epochs: 250
         lr: 0.0005
         batch_size: 300
         optimizer: "AdamW"
@@ -196,7 +196,7 @@ Models:
         batch_track_stats: "True"
         act: "relu"
         dropout_rate: 0.0
-        epochs: 150
+        epochs: 250
         lr: 0.0005
         batch_size: 300
         optimizer: "AdamW"
@@ -216,7 +216,7 @@ Models:
         batch_track_stats: "True"
         act: "relu"
         dropout_rate: 0.0
-        epochs: 150
+        epochs: 250
         lr: 0.002
         batch_size: 300
         optimizer: "AdamW"
