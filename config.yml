@@ -47,7 +47,7 @@ Job:
         ###specific options   
         hyper_trials: 10
         #number of concurrent trials (can be greater than number of GPUs)
-        hyper_concurrency: 1
+        hyper_concurrency: 8
         #frequency of checkpointing and update (default: 1)
         hyper_iter: 1
         #resume a previous hyperparameter optimization run
