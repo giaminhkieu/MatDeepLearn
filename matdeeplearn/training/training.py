@@ -1001,13 +1001,13 @@ def tune_setup(
     local_dir = "ray_results"
     # currently no support for paralleization per trial
     gpus_per_trial = 0
-
+    print(f"gpus per trial:{gpus_per_trial}")
     ##Set up search algo
     search_algo = HyperOptSearch(metric="loss", mode="min", n_initial_points=5)
     search_algo = ConcurrencyLimiter(
         search_algo, max_concurrent=job_parameters["hyper_concurrency"]
     )
-
+    print("Search algo works)
     ##Resume run
     if os.path.exists(local_dir + "/" + job_parameters["job_name"]) and os.path.isdir(
         local_dir + "/" + job_parameters["job_name"]
@@ -1029,7 +1029,7 @@ def tune_setup(
     reporter = CLIReporter(
         max_progress_rows=20, max_error_rows=5, parameter_columns=parameter_columns
     )
-
+    print("CLIReporter works")
     ##Run tune
     tune_result = tune.run(
         partial(tune_trainable, data_path=data_path),
@@ -1059,6 +1059,7 @@ def tune_setup(
             // job_parameters["hyper_iter"]
         },
     )
+    print("tuning works")
 
     ##Get best trial
     best_trial = tune_result.get_best_trial("loss", "min", "all")
