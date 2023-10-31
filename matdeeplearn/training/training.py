@@ -995,8 +995,9 @@ def tune_setup(
     from ray.tune.search.hyperopt import HyperOptSearch
     from ray.tune.search import ConcurrencyLimiter
     from ray.tune import CLIReporter
-
+    print("is ray.init failing?")
     ray.init()
+    print("no")
     data_path = "_"
     local_dir = "ray_results"
     # currently no support for paralleization per trial
