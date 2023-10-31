@@ -1007,7 +1007,7 @@ def tune_setup(
     search_algo = ConcurrencyLimiter(
         search_algo, max_concurrent=job_parameters["hyper_concurrency"]
     )
-    print("Search algo works)
+    print("Search algo works")
     ##Resume run
     if os.path.exists(local_dir + "/" + job_parameters["job_name"]) and os.path.isdir(
         local_dir + "/" + job_parameters["job_name"]
