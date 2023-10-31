@@ -868,6 +868,8 @@ def tune_trainable(config, checkpoint_dir=None, data_path=None):
     if torch.cuda.is_available():
         rank = "cuda"
 
+    print(f"rank:{rank}")
+
     ##Reprocess data in a separate directory to prevent conflict
     if job_parameters["reprocess"] == "True":
         time = datetime.now()
