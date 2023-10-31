@@ -1000,7 +1000,7 @@ def tune_setup(
     data_path = "_"
     local_dir = "ray_results"
     # currently no support for paralleization per trial
-    gpus_per_trial = 1
+    gpus_per_trial = 2
 
     ##Set up search algo
     search_algo = HyperOptSearch(metric="loss", mode="min", n_initial_points=5)
@@ -1033,7 +1033,7 @@ def tune_setup(
     ##Run tune
     tune_result = tune.run(
         partial(tune_trainable, data_path=data_path),
-        resources_per_trial={"cpu": 1, "gpu": gpus_per_trial},
+        resources_per_trial={"cpu": 0, "gpu": gpus_per_trial},
         config={
             "hyper_args": hyper_args,
             "job_parameters": job_parameters,
