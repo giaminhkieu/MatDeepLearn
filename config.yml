@@ -49,7 +49,7 @@ Job:
         #number of concurrent trials (can be greater than number of GPUs)
         hyper_concurrency: 8
         #frequency of checkpointing and update (default: 1)
-        hyper_iter: 5
+        hyper_iter: 20
         #resume a previous hyperparameter optimization run
         hyper_resume: "True"
         #Verbosity of ray tune output; available: (1, 2, 3)
@@ -174,7 +174,7 @@ Models:
         batch_track_stats: "True"
         act: "relu"
         dropout_rate: 0.0
-        epochs: 250
+        epochs: 200
         lr: 0.0005
         batch_size: 300
         optimizer: "AdamW"
@@ -196,7 +196,7 @@ Models:
         batch_track_stats: "True"
         act: "relu"
         dropout_rate: 0.0
-        epochs: 250
+        epochs: 200
         lr: 0.0005
         batch_size: 300
         optimizer: "AdamW"
