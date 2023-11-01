@@ -1001,7 +1001,7 @@ def tune_setup(
     data_path = "_"
     local_dir = "ray_results"
     # currently no support for paralleization per trial
-    gpus_per_trial = 0
+    gpus_per_trial = 1
     print(f"gpus per trial:{gpus_per_trial}")
     ##Set up search algo
     search_algo = HyperOptSearch(metric="loss", mode="min", n_initial_points=5)
