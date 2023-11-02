@@ -161,20 +161,20 @@ Models:
         scheduler_args: {"mode":"min", "factor":0.8, "patience":10, "min_lr":0.00001, "threshold":0.0002}               
     SchNet_demo:
         model: SchNet
-        dim1: 100
-        dim2: 100
-        dim3: 150
+        dim1: 50
+        dim2: 50
+        dim3: 100
         cutoff: 8
         pre_fc_count: 1
-        gc_count: 4
-        post_fc_count: 3
+        gc_count: 3
+        post_fc_count: 2
         pool: "global_mean_pool"
         pool_order: "early"
         batch_norm: "True"
         batch_track_stats: "True"
         act: "relu"
         dropout_rate: 0.0
-        epochs: 200
+        epochs: 150
         lr: 0.0005
         batch_size: 300
         optimizer: "AdamW"
