@@ -262,7 +262,7 @@ def model_setup(
     # DDP
     if rank not in ("cpu", "cuda"):
         model = DistributedDataParallel(
-            model, device_ids=[rank], find_unused_parameters=True
+            model, device_ids=[rank], find_unused_parameters=False
         )
         # model = DistributedDataParallel(model, device_ids=[rank], find_unused_parameters=False)
     if print_model == True and rank in (0, "cpu", "cuda"):
