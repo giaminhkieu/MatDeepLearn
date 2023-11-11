@@ -176,7 +176,7 @@ Models:
         dropout_rate: 0.0
         epochs: 200
         lr: 0.0005
-        batch_size: 10
+        batch_size: 200
         optimizer: "AdamW"
         optimizer_args: {}
         scheduler: "ReduceLROnPlateau"
@@ -198,7 +198,7 @@ Models:
         dropout_rate: 0.0
         epochs: 200
         lr: 0.0003
-        batch_size: 60
+        batch_size: 200
         optimizer: "AdamW"
         optimizer_args: {}
         scheduler: "ReduceLROnPlateau"
@@ -218,7 +218,7 @@ Models:
         dropout_rate: 0.0
         epochs: 200
         lr: 0.00017
-        batch_size: 20
+        batch_size: 200
         optimizer: "AdamW"
         optimizer_args: {}
         scheduler: "ReduceLROnPlateau"
