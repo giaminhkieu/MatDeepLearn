@@ -161,64 +161,64 @@ Models:
         scheduler_args: {"mode":"min", "factor":0.8, "patience":10, "min_lr":0.00001, "threshold":0.0002}               
     SchNet_demo:
         model: SchNet
-        dim1: 64
-        dim2: 64
-        dim3: 64
+        dim1: 30
+        dim2: 100
+        dim3: 30
         cutoff: 8
         pre_fc_count: 1
-        gc_count: 3
-        post_fc_count: 1
-        pool: "global_mean_pool"
+        gc_count: 9
+        post_fc_count: 3
+        pool: "global_max_pool"
         pool_order: "early"
         batch_norm: "True"
         batch_track_stats: "True"
         act: "relu"
         dropout_rate: 0.0
-        epochs: 250
+        epochs: 200
         lr: 0.0005
-        batch_size: 256
+        batch_size: 10
         optimizer: "AdamW"
         optimizer_args: {}
         scheduler: "ReduceLROnPlateau"
         scheduler_args: {"mode":"min", "factor":0.8, "patience":10, "min_lr":0.00001, "threshold":0.0002}        
     MEGNet_demo:
         model: MEGNet
-        dim1: 64
-        dim2: 64
-        dim3: 64
+        dim1: 130
+        dim2: 130
+        dim3: 160
         pre_fc_count: 1
-        gc_count: 3
+        gc_count: 8
         gc_fc_count: 2
         post_fc_count: 1
-        pool: "global_mean_pool"
+        pool: "global_add_pool"
         pool_order: "early"
         batch_norm: "True"
         batch_track_stats: "True"
         act: "relu"
         dropout_rate: 0.0
-        epochs: 150
-        lr: 0.0005
-        batch_size: 128
+        epochs: 200
+        lr: 0.0003
+        batch_size: 60
         optimizer: "AdamW"
         optimizer_args: {}
         scheduler: "ReduceLROnPlateau"
         scheduler_args: {"mode":"min", "factor":0.8, "patience":10, "min_lr":0.00001, "threshold":0.0002}              
     GCN_demo:
         model: GCN
-        dim1: 100 
-        dim2: 150
+        dim1: 30 
+        dim2: 100
         pre_fc_count: 1
-        gc_count: 4
-        post_fc_count: 3
-        pool: "global_mean_pool"
+        gc_count: 8
+        post_fc_count: 2
+        pool: "global_add_pool"
         pool_order: "early"
         batch_norm: "True"
         batch_track_stats: "True"
         act: "relu"
         dropout_rate: 0.0
-        epochs: 250
-        lr: 0.002
-        batch_size: 300
+        epochs: 200
+        lr: 0.00017
+        batch_size: 20
         optimizer: "AdamW"
         optimizer_args: {}
         scheduler: "ReduceLROnPlateau"
