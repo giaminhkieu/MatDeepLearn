@@ -190,7 +190,7 @@ Models:
         gc_count: 8
         gc_fc_count: 2
         post_fc_count: 1
-        pool: "global_add_pool"
+        pool: "global_mean_pool"
         pool_order: "early"
         batch_norm: "True"
         batch_track_stats: "True"
