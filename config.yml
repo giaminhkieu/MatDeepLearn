@@ -187,7 +187,7 @@ Models:
         dim2: 130
         dim3: 160
         pre_fc_count: 1
-        gc_count: 8
+        gc_count: 3
         gc_fc_count: 2
         post_fc_count: 1
         pool: "global_mean_pool"
